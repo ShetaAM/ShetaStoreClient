@@ -1,0 +1,89 @@
+<section class="banner-bottom">
+  <div class="container">
+    <div class="content-grid">
+      <div class="text-center icon">
+        <span class="fa fa-user-circle-o"></span>
+      </div>
+      <div class="content-bottom">
+        <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
+          <div class="field-group">
+            <div class="content-input-field">
+              <input
+                type="text"
+                placeholder="نام کاربری"
+                formControlName="UserName"
+              />
+            </div>
+          </div>
+          <div class="field-group">
+            <div class="content-input-field">
+              <input type="email" placeholder="ایمیل" formControlName="Email" />
+            </div>
+          </div>
+          <div class="field-group">
+            <div class="content-input-field">
+              <input
+                type="password"
+                placeholder="کلمه عبور"
+                formControlName="Password"
+              />
+            </div>
+          </div>
+          <div class="field-group">
+            <div class="content-input-field">
+              <input
+                type="Password"
+                placeholder="تکرار کلمه عبور"
+                formControlName="RePassword"
+              />
+            </div>
+          </div>
+          <div class="field-group">
+            <div class="content-input-field">
+              <input
+                type="text"
+                placeholder="نام"
+                formControlName="FirstName"
+              />
+            </div>
+          </div>
+          <div class="field-group">
+            <div class="content-input-field">
+              <input
+                type="text"
+                placeholder="نام خانودگی"
+                formControlName="LastName"
+              />
+            </div>
+          </div>
+          <div class="content-input-field">
+            <button type="submit" class="btn">ثبت نام</button>
+          </div>
+          <div class="list-login-bottom text-center mt-lg-5 mt-4">
+            <a href="#" class="">By clicking Signup, I agree to your terms</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<swal
+  #sweetAlert
+  text="ایمیل وارد شده : {{
+    this.registerForm.controls.Email.value
+  }} تکراری میباشد"
+  title="اخطار"
+  icon="warning"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+>
+</swal>
+<swal
+  #sweetAlertSuccess
+  text="ثبت نام شما انجام شد"
+  title="ثبت نام موفق"
+  icon="success"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+>
+</swal>

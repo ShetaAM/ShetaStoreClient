@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ShetaStoreClient"
+    }
+  },
+  "defaultProject": "ShetaStoreClient",
+  "cli": {
+    "analytics": false
+  }
 }
